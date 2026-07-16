@@ -1,0 +1,20 @@
+{
+  "name": "@cottassistant/server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "bun --hot src/index.ts",
+    "start": "bun src/index.ts"
+  },
+  "dependencies": {
+    "@cottassistant/core": "workspace:*",
+    "@cottassistant/shared": "workspace:*",
+    "discord.js": "^14.21.0",
+    "zod": "^3.25.76"
+  },
+  "optionalDependencies": {
+    "openwakeword-js": "^0.1.27",
+    "onnxruntime-web": "^1.22.0"
+  }
+}

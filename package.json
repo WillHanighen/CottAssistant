@@ -1,0 +1,19 @@
+{
+  "name": "cottassistant",
+  "private": true,
+  "type": "module",
+  "workspaces": ["apps/*", "packages/*"],
+  "scripts": {
+    "dev": "bun run --filter @cottassistant/server dev",
+    "dev:web": "bun run --filter @cottassistant/web dev",
+    "dev:all": "bun run scripts/dev-all.ts",
+    "dev:static": "bun run build && bun run --filter @cottassistant/server dev",
+    "voice-daemon": "bun run --filter @cottassistant/voice-daemon start",
+    "build": "bun run --filter @cottassistant/web build",
+    "typecheck": "tsc --noEmit -p packages/shared && tsc --noEmit -p packages/core && tsc --noEmit -p apps/server && tsc --noEmit -p apps/voice-daemon"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.9.3"
+  }
+}

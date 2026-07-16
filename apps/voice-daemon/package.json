@@ -1,0 +1,14 @@
+{
+  "name": "@cottassistant/voice-daemon",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "bun src/index.ts",
+    "dev": "bun --hot src/index.ts"
+  },
+  "dependencies": {
+    "@cottassistant/core": "workspace:*",
+    "@cottassistant/shared": "workspace:*"
+  }
+}
